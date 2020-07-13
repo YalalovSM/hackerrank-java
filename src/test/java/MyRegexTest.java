@@ -4,6 +4,8 @@ import static org.hamcrest.MatcherAssert.assertThat;
 import org.junit.Test;
 
 public class MyRegexTest {
+    // https://www.hackerrank.com/challenges/java-regex/problem
+    // TODO add parameterized tests
     @Test
     public void testMyRegexOk() {
         assertThat("000.12.12.034".matches(new MyRegex().pattern), is(true));
