@@ -28,4 +28,17 @@ public class MyRegexTest {
         assertThat(duplicateWords.transform("in inthe"), is(equalTo("in inthe")));
         assertThat(duplicateWords.transform("Hello hello Ab aB"), is(equalTo("Hello Ab")));
     }
+
+    // https://www.hackerrank.com/challenges/valid-username-checker/problem
+    @Test
+    public void testValidUserName() {
+        assertThat("Julia".matches(UsernameValidator.regularExpression), is(false));
+        assertThat("Samantha".matches(UsernameValidator.regularExpression), is(true));
+        assertThat("Samantha_21".matches(UsernameValidator.regularExpression), is(true));
+        assertThat("1Samantha".matches(UsernameValidator.regularExpression), is(false));
+        assertThat("Samantha?10_2A".matches(UsernameValidator.regularExpression), is(false));
+        assertThat("JuliaZ007".matches(UsernameValidator.regularExpression), is(true));
+        assertThat("Julia@007".matches(UsernameValidator.regularExpression), is(false));
+        assertThat("_Julia007".matches(UsernameValidator.regularExpression), is(false));
+    }
 }
