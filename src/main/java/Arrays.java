@@ -19,4 +19,22 @@ public class Arrays {
 
         return result;
     }
+
+    public String minimumBribes(int[] q) {
+        int bribes = 0;
+
+        for (int i = q.length - 1; i >= 0; i--) {
+            if (q[i] - (i + 1) > 2) {
+                return "Too chaotic";
+            }
+            int start = q[i] - 2 > 0 ? q[i] - 2 : 0;
+            for (int j = start; j < i; j++) {
+                if (q[j] > q[i]) {
+                    bribes++;
+                }
+            }
+        }
+
+        return String.valueOf(bribes);
+    }
 }
