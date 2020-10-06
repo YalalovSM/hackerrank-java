@@ -4,10 +4,10 @@ import static org.hamcrest.MatcherAssert.assertThat;
 
 import org.junit.Test;
 
-public class ArraysTest {
+public class ArrayOperationsTest {
     @Test
     public void testRotLeft() {
-        Arrays clazz = new Arrays();
+        ArrayOperations clazz = new ArrayOperations();
 
         assertThat(clazz.rotLeft(new int[]{1, 2, 3, 4, 5}, 2), is(equalTo(new int[]{3, 4, 5, 1, 2})));
         assertThat(clazz.rotLeft(new int[]{1, 2, 3, 4, 5}, 4), is(equalTo(new int[]{5, 1, 2, 3, 4})));
@@ -15,7 +15,7 @@ public class ArraysTest {
 
     @Test
     public void testMinimumBribes() {
-        Arrays clazz = new Arrays();
+        ArrayOperations clazz = new ArrayOperations();
 
         assertThat(clazz.minimumBribes(new int[]{2, 5, 1, 3, 4}), is(equalTo("Too chaotic")));
         assertThat(clazz.minimumBribes(new int[]{2, 1, 5, 3, 4}), is(equalTo("3")));

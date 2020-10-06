@@ -1,4 +1,4 @@
-public class Arrays {
+public class ArrayOperations {
     public int[] rotLeft(int[] a, int d) {
         int[] result = new int[a.length];
 
