@@ -34,4 +34,13 @@ public class BigIntegerTest {
 
         assertThat(output, is(equalTo("prime")));
     }
+
+    @Test
+    public void testAddAndMultiply() {
+        BigIntegerOperations bigIntegerOperations = new BigIntegerOperations();
+        bigIntegerOperations.addAndMultiply("1234", "20");
+        String output = new String(baos.toByteArray());
+
+        assertThat(output, is(equalTo("1254\n24680\n")));
+    }
 }
